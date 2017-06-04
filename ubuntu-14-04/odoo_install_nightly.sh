@@ -53,14 +53,14 @@ apt-get install postgresql -y
 echo -e "\n---- Install and link wkhtml as needed for odoo ----"
 if [[ $OE_VERSION == "9.0" ]]; then
    if [[ $OS_MACHINE_TYPE == "x86_64" ]]; then
-      wget -c http://download.gna.org/wkhtmltopdf/0.12/0.12.2.1/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb && \
+      wget -c https://downloads.wkhtmltopdf.org/0.12/0.12.1/wkhtmltox-0.12.1_linux-trusty-amd64.deb && \
       dpkg -i wkhtmltox-0.12.2.1_linux-trusty-amd64.deb
       if [[ $? -ne 0 ]];then
          apt-get install -f -y && \
          dpkg -i wkhtmltox-0.12.2.1_linux-trusty-amd64.deb
       fi
    else
-      wget -c http://download.gna.org/wkhtmltopdf/0.12/0.12.2.1/wkhtmltox-0.12.2.1_linux-trusty-i386.deb && \
+      wget -c https://downloads.wkhtmltopdf.org/0.12/0.12.1/wkhtmltox-0.12.1_linux-trusty-i386.deb && \
       dpkg -i wkhtmltox-0.12.2.1_linux-trusty-i386.deb
       if [[ $? -ne 0 ]];then
          apt-get install -f -y && \
@@ -69,14 +69,14 @@ if [[ $OE_VERSION == "9.0" ]]; then
    fi
 elif [[ $OE_VERSION == "8.0" ]]; then
    if [[ $OS_MACHINE_TYPE == "x86_64" ]]; then
-      wget -c http://download.gna.org/wkhtmltopdf/0.12/0.12.1/wkhtmltox-0.12.1_linux-trusty-amd64.deb && \
+      wget -c https://downloads.wkhtmltopdf.org/0.12/0.12.1/wkhtmltox-0.12.1_linux-trusty-amd64.deb && \
       dpkg -i wkhtmltox-0.12.1_linux-trusty-amd64.deb
       if [[ $? -ne 0 ]]; then
          apt-get install -f -y && \
          dpkg -i wkhtmltox-0.12.1_linux-trusty-amd64.deb
       fi
    else
-      wget -c http://download.gna.org/wkhtmltopdf/0.12/0.12.1/wkhtmltox-0.12.1_linux-trusty-i386.deb && \
+      wget -c https://downloads.wkhtmltopdf.org/0.12/0.12.1/wkhtmltox-0.12.1_linux-trusty-i386.deb && \
       dpkg -i wkhtmltox-0.12.1_linux-trusty-i386.deb
       if [[ $? -ne 0 ]]; then
          apt-get install -f -y && \
